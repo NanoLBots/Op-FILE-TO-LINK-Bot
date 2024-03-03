@@ -26,7 +26,7 @@ async def start(b, m):
     if usr_cmd == "/start":
         await m.reply_photo(
             photo="https://graph.org/file/7200eb5f596ae3b17cfba.jpg",
-            caption="**Hello⭐\n\nI will generate permanent download / stream links on your media**\n\n**Send /help for more details\n\nSend Me your media(Files/images/Videos) to start processing**",
+            caption="**Hello⭐\n\nI will generate permanent download / stream links on your media**\n\n**Send /help for more details\n\nSend Me your media(Files/images/Audios/Videos) to start processing**",
             reply_markup=InlineKeyboardMarkup(
                 [
                    [InlineKeyboardButton("Owner", url="https://t.me/botsnano"), InlineKeyboardButton("Leech Group", url="https://t.me/nano_leech")], 
@@ -59,7 +59,7 @@ async def start(b, m):
                                      Var.PORT,
                                      get_msg.id)
 
-        msg_text = "**ᴛᴏᴜʀ ʟɪɴᴋ ɪs ɢᴇɴᴇʀᴀᴛᴇᴅ...⚡\n\n📧 ғɪʟᴇ ɴᴀᴍᴇ :-\n{}\n {}\n\n💌 ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ :- {}\n\n♻️ ᴛʜɪs ʟɪɴᴋ ɪs ᴘᴇʀᴍᴀɴᴇɴᴛ ᴀɴᴅ ᴡᴏɴ'ᴛ ɢᴇᴛ ᴇxᴘɪʀᴇᴅ ♻️\n\n<b>❖ YouTube.com/@Woodcraft5</b>**"
+        msg_text = "**ᴛᴏᴜʀ ʟɪɴᴋ ɪs ɢᴇɴᴇʀᴀᴛᴇᴅ...⚡\n\n📧 :-\n{}\n {}\n\n💌 :- {}\n\n♻️ waiting♻️\n\n<b>❖ https://t.me/@botsnano</b>**"
         await m.reply_text(            
             text=msg_text.format(file_name, file_size, stream_link),
             
@@ -78,7 +78,7 @@ async def help_handler(bot, message):
               
     await message.reply_photo(
             photo="https://graph.org/file/7200eb5f596ae3b17cfba.jpg",
-            caption="**Send Me a Media and I will generate the download/streaming link for it**", 
+            caption="**Lets begin by Sending Me a Media and I will generate the download/streaming link for it**", 
   
         
         reply_markup=InlineKeyboardMarkup(
