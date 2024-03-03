@@ -21,7 +21,7 @@ async def sts(c: Client, m: Message):
     user_id=m.from_user.id
     if user_id in Var.OWNER_ID:
         total_users = await db.total_users_count()
-        await m.reply_text(text=f"∝⌾≕≻ 𝐓𝐨𝐭𝐚𝐥 𝐔𝐬𝐞𝐫𝐬  𝐢𝐧 𝐁𝐃: {total_users}", quote=True)
+        await m.reply_text(text=f"Total Users: {total_users}", quote=True)
         
         
 @AngelBot.on_message(filters.command("broadcast") & filters.private  & filters.user(list(Var.OWNER_ID)))
