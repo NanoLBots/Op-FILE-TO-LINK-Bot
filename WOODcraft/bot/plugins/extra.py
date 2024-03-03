@@ -7,22 +7,22 @@ from utils_bot import *
 from WOODcraft import StartTime
 
 
-START_TEXT = """ 🆔 Your Telegram DC Is ⌾≕≻ `{}`  """
+START_TEXT = """Your Telegram DC Is ⌾≕≻ `{}`  """
 
 
-@AngelBot.on_message(filters.regex("angel👼"))
+@AngelBot.on_message(filters.regex("god"))
 async def maintainers(b,m):
     try:
        await b.send_message(chat_id=m.chat.id,text="HELLO",quote=True)
     except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="🦋 I am Coded By ⌾≕≻ [WOODcraft](https://t.me/Farooq_is_KING)",
+                    text="My Creator ⌾≕≻ [AS](https://t.me/tusharbyas)",
                     
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("Developer💻", url=f"https://t.me/Farooq_is_KING")
+                                InlineKeyboardButton("Developer💻", url=f"https://t.me/tusharbyas")
                             ]
                         ]
                     ),
@@ -37,12 +37,12 @@ async def follow_user(b,m):
     except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<B>🦋 𝐏𝐥𝐞𝐚𝐬𝐞 𝐉𝐨𝐢𝐧 𝐌𝐲 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🦋</B>",
+                    text="<B>Join with me</B>",
                     
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ✜", url=f"https://t.me/Opleech")
+                                InlineKeyboardButton("Bots Channel", url=f"https://t.me/botsnano")
                             ]
                         ]
                     ),
@@ -63,25 +63,25 @@ async def start(bot, update):
     
 @AngelBot.on_message(filters.command("list"))
 async def list(l, m):
-    LIST_MSG = "🌺 Hi! {} Here is a list of all my commands \n \n ❍⊱≕≻ Tap on command text and copy then send \n \n ❍⊱≕≻ . `start⚡️` \n ❍⊱≕≻ . `list📚` \n ❍⊱≕≻ . `login🔑` \n ❍⊱≕≻ . `follow🦋` \n ❍⊱≕≻. `ping📡` \n ❍⊱≕≻ . `status🔥` \n ❍⊱≕≻ . `DC` this tells your telegram dc \n ❍⊱≕≻ . `angel👼` "
+    LIST_MSG = "Hello {}! Here's the list of all my commands \n \n ❍⊱≕≻ Tap on command text to copy then send(without / )\n \n ❍⊱≕≻ . `list` \n ❍⊱≕≻ . `follow` \n ❍⊱≕≻. `ping` \n ❍⊱≕≻ . `status` \n ❍⊱≕≻ . `DC` (what's yourtelegram dc) \n ❍⊱≕≻ . `god` "
     await l.send_message(chat_id = m.chat.id,
         text = LIST_MSG.format(m.from_user.mention(style="md"))
         
     )
     
     
-@AngelBot.on_message(filters.regex("ping📡"))
+@AngelBot.on_message(filters.regex("ping"))
 async def ping(b, m):
     start_t = time.time()
     ag = await m.reply_text("....")
     end_t = time.time()
     time_taken_s = (end_t - start_t) * 1000
-    await ag.edit(f"⌾≕≻ Pong!\n{time_taken_s:.3f} 🔥 ms")
+    await ag.edit(f"⌾≕≻ Pong!\n{time_taken_s:.3f} ms")
     
     
     
     
-@AngelBot.on_message(filters.private & filters.regex("status🔥"))
+@AngelBot.on_message(filters.private & filters.regex("status"))
 async def stats(bot, update):
   currentTime = readable_time((time.time() - StartTime))
   total, used, free = shutil.disk_usage('.')
@@ -102,5 +102,5 @@ async def stats(bot, update):
             f'<b>∝⌾≕≻ CPU:</b> {cpuUsage}%\n' \
             f'<b>∝⌾≕≻ RAM:</b> {memory}%\n' \
             f'<b>∝⌾≕≻ Disk:</b> {disk}%\n\n' \
-            f'<b>◆〓◆ ❖ 𝐖𝐃 𝐙𝐎𝐍𝐄 ❖ ™ ◆〓◆</b>'
+            f'<b>◆〓◆ ❖ NANO ❖  ◆〓◆</b>'
   await update.reply_text(botstats)
